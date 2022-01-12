@@ -1,0 +1,255 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+ background-color: #18233e;
+}
+
+.container {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 200px auto;
+}
+
+.bird-box {
+  position: relative;
+  width: 250px;
+  height: 250px; 
+}
+
+.part-1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: bird1 3s ease-in-out infinite ;
+}
+
+.part-1-box {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 50%;
+  border-radius: 0 130px 130px 0;
+  background-image: url('https://img.freepik.com/free-vector/abstract-background-red_1078-436.jpg?size=626&ext=jpg');
+}
+
+.part-2 {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 1;
+}
+
+.part-2-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  animation: bird2 3s ease-in-out infinite ;
+}
+
+.part-2-sub {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background-color: #fff;
+  border-radius: 0px 90px 90px 0px;
+}
+
+.part-3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  animation: bird3 3s ease-in-out infinite ;
+}
+
+.part-3-box {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  border-radius: 0 0 90px 0;
+  background-color: #e7e7e7;
+}
+.part-4{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  animation: bird4 3s ease-in-out infinite ;
+}
+
+.part-4-box {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top:0;
+  left: 0;
+  border-radius: 90px 0 0 0;
+  background-color: #f6ce41;
+}
+
+.part-5 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  z-index: 3;
+
+  animation: bird5 3s ease-in-out infinite ;
+}
+
+.part-5-box {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  top:50%;
+  left: 25%;
+  border-radius: 0  0 0 90px;
+  background-color: #f7a501;
+}
+
+.part-6 {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  top:15%;
+  left:55%;
+  z-index: 4;
+  border-radius: 50%;
+  background-color: #000000;
+  animation: bird6 1.5s ease-in-out infinite alternate;
+}
+
+.bird-box:hover .eyes{
+  left: 5%;
+}
+
+@keyframes bird1{
+  0%{
+    transform: rotate(-360deg);
+  }
+  15%{
+    transform: rotate(-360deg);
+  }
+  35%{
+    transform: rotate(-180deg);
+  }
+  65%{
+    transform: rotate(-180deg);
+  }
+  85%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bird2{
+  0%{
+    transform: rotate(0deg);
+  }
+  15%{
+    transform: rotate(0deg);
+  }
+  35%{
+    transform: rotate(-180deg);
+  }
+  65%{
+    transform: rotate(-180deg);
+  }
+  85%{
+    transform: rotate(-360deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+}
+@keyframes bird3{
+  0%{
+    transform: rotate(0deg);
+  }
+  15%{
+    transform: rotate(0deg);
+  }
+  35%{
+    transform: rotate(90deg);
+  }
+  65%{
+    transform: rotate(90deg);
+  }
+  85%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+@keyframes bird4{
+  15%{
+    transform: rotate(0deg);
+  }
+  35%{
+    transform: rotate(90deg);
+  }
+  65%{
+    transform: rotate(90deg);
+  }
+  85%{
+    transform: rotate(0deg);
+  }
+}
+@keyframes bird5{
+  15%{
+    transform: rotate(0deg);
+  }
+  35%{
+    transform: rotate(-90deg);
+  }
+  65%{
+    transform: rotate(-90deg);
+  }
+  85%{
+    transform: rotate(0deg);
+  }
+}
+@keyframes bird6{
+  0%{
+    left:55%;
+  }
+  25%{
+    left:55%;
+  }
+  75%{
+    left:15%;
+  }
+  100%{
+    left: 15%;
+  }
+}
